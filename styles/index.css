@@ -1,0 +1,39 @@
+header{
+    background-color: lightgreen;
+    height: 13vh;
+    min-height: 30pt;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: lightsteelblue;
+    height: 10vh;
+    min-height: 15pt;
+}
+
+button{
+    height: 10vh;
+    min-height: 20pt;
+    width: 20vw;
+    min-width: 40pt;
+    border-radius: 5pt;
+}
+
+h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+footer{
+    background-color: lightsalmon;
+    height: 15vh;
+    min-height: 15pt;
+}
