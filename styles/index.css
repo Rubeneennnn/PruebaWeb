@@ -13,6 +13,18 @@ h1{
     align-items: center;
 }
 
+.play {
+    display: flex;
+    justify-content: right;
+    margin: auto;
+    margin-right: 15pt;
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 main{
     background-color: lightsteelblue;
     height: 10vh;
@@ -29,6 +41,11 @@ button{
     width: 20vw;
     min-width: 40pt;
     border-radius: 5pt;
+    border-style: outset;
+}
+
+button:hover {
+    background-color: aqua ;
 }
 
 h3{

@@ -2,3 +2,17 @@ img{
     max-width: 50px;
     max-height: 50px;
 }
+
+button {
+    border-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home {
+    margin: auto;
+    margin-right: 15pt;
+}
