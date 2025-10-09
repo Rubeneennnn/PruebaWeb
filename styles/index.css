@@ -1,6 +1,6 @@
 header{
     background-color: lightgreen;
-    height: 13vh;
+    height: 40vh;
     min-height: 30pt;
 }
 
@@ -28,8 +28,8 @@ img {
 
 main{
     background-color: lightsteelblue;
-    height: 10vh;
-    min-height: 15pt;
+    height: 40vh;
+    min-height: 30pt;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +55,14 @@ h3{
 }
 
 footer{
-    background-color: lightsalmon;
-    height: 15vh;
-    min-height: 15pt;
+    background-image: #ponerfoto ;
+    linear-gradient(
+        1deg,
+        rgba(0, 247, 255, 0.836),
+        rgba(114, 114, 114, 0.5)
+    )
+    height: 40vh;
+    min-height: 30pt;
 }
 
 @media only screen and (max-width: 500px) {
