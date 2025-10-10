@@ -1,16 +1,18 @@
-header{
-    background-color: lightgreen;
-    height: 40vh;
-    min-height: 30pt;
+header {
+    height: 400pt;
+    min-height: auto;
+    width: auto;
+    min-width: auto;
 }
 
-h1{
-    margin: 0;
+.tituloGrande {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    color: whitesmoke;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    justify-content: center; 
+    margin: auto; 
 }
 
 .play {
@@ -26,9 +28,8 @@ img {
     max-height: 50px;
 }
 
-main{
-    background-color: lightsteelblue;
-    height: 40vh;
+main {
+    height: 500pt;
     min-height: 30pt;
     display: flex;
     justify-content: center;
@@ -49,19 +50,13 @@ button:hover {
     background-color: aqua ;
 }
 
-h3{
+h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
 
-footer{
-    background-image: #ponerfoto ;
-    linear-gradient(
-        1deg,
-        rgba(0, 247, 255, 0.836),
-        rgba(114, 114, 114, 0.5)
-    )
-    height: 40vh;
+footer {
+    height: 400pt;
     min-height: 30pt;
 }
 
@@ -74,4 +69,13 @@ footer{
             max-height: 30vh;
         }
     }
+}
+
+body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0),
+        rgba(0, 0, 0, 0)
+    )
+    ,url(../media/fondoindex1.jpg);
 }
