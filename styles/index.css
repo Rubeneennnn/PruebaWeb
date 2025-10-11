@@ -1,18 +1,32 @@
 header {
-    height: 400pt;
-    min-height: auto;
-    width: auto;
-    min-width: auto;
+    
 }
 
-.tituloGrande {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: whitesmoke;
+.hero {
+    height: 100vh;
+    top: 0;
     display: flex;
-    text-align: center;
     justify-content: center; 
-    margin: auto; 
+    align-items: center;
+    transition: all 0.9s ease;
+    position: sticky; 
+    z-index: 10;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: whitesmoke;
+    backdrop-filter: blur(2px);
+    transition: font-size 0.6s ease, 
+        transform 0.45s ease,
+        color 0.45s ease,
+        backdrop-filter 0.45s ease;
+}
+
+body:has(main:in-view) .hero h1 {
+    font-size: 2.5rem;
+    padding: 0 10px;
 }
 
 .play {
@@ -23,44 +37,51 @@ header {
     margin-right: 15pt;
 }
 
-img {
-    max-width: 50px;
-    max-height: 50px;
-}
-
 main {
-    height: 500pt;
-    min-height: 30pt;
+    padding: 5rem 2rem;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
 }
 
-button{
-    height: 10vh;
-    min-height: 20pt;
-    width: 20vw;
-    min-width: 40pt;
-    border-radius: 5pt;
-    border-style: outset;
+button {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 button:hover {
-    background-color: aqua ;
+    transform: scale(1.08);
+    box-shadow: 0 0px 20px rgba(212, 163, 115, 0.4);
+    transform: translateY(-4px) scale(1.05);
 }
 
-h3 {
+button h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
 
 footer {
-    height: 400pt;
-    min-height: 30pt;
+    
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
     main{
         flex-direction: column;
         min-height: 30vh;
@@ -71,11 +92,33 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 body {
     background-image: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0),
         rgba(0, 0, 0, 0)
     )
-    ,url(../media/fondoindex1.jpg);
+    ,url(../media/aaa.png);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
+    height: 200vh;
+    overflow-x: hidden;
+    backdrop-filter: blur(4px);
 }
