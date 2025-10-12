@@ -71,6 +71,8 @@ main {
     filter: brightness(0.9) contrast(1.1) saturate(0.9);
 }
 
+.bloque:nth-child(even){ flex-direction: row-reverse; }
+
 .texto {
     width: 55%;
 }
@@ -116,13 +118,21 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .home img {
+        width: 42px;
+        height: 42px;
+    }
+
     .bloque {
         flex-direction: column;
         text-align: center;
     }
 
-    .bloque img,
-    .texto {
+    .bloque img, .texto {
         width: 100%;
     }
 
@@ -132,7 +142,7 @@ footer {
 }
 
 body {
-    background: url(../media/1.png);
+    background: url(../media/fondoHistoria.png);
     background-size: cover;
     backdrop-filter: blur(10px);
     margin: 0;
