@@ -1,53 +1,79 @@
 header {
-    
+    margin-bottom: 20px;
 }
 
 .hero {
-    height: 100vh;
+    min-height: 50vh;
+    height: auto;
     top: 0;
     display: flex;
     justify-content: center; 
     align-items: center;
-    transition: all 0.9s ease;
-    position: sticky; 
+    position: static; 
     z-index: 10;
+    padding: 3rem 0;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 8rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    background: linear-gradient(90deg, #c084fc, #8b5cf6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: whitesmoke;
-    backdrop-filter: blur(2px);
-    transition: font-size 0.6s ease, 
-        transform 0.45s ease,
-        color 0.45s ease,
-        backdrop-filter 0.45s ease;
+    text-shadow: 0 0 20px rgba(185, 127, 255, 0.4),
+        0 0 40px rgba(120, 0, 255, 0.3);
 }
 
-body:has(main:in-view) .hero h1 {
-    font-size: 2.5rem;
-    padding: 0 10px;
+.play audio {
+    width: 190px;
+    height: 32px;
+    display: block;
+    outline: none;
+    filter: brightness(1.05) drop-shadow(0 0 6px #b37aff);
+    border-radius: 20px;
 }
 
 .play {
     display: flex;
-    justify-content: right;
-    align-items: center;
-    margin: auto;
-    margin-right: 15pt;
+    justify-content: center;
+    position: fixed;
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 28px;
+    padding: 10px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.play:hover {
+    box-shadow: 0 0 20px rgba(185, 127, 255, 0.25);
+    transform: translateY(-50%) scale(1.02);
 }
 
 main {
-    padding: 5rem 2rem;
-    min-height: 120vh;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 button {
-    text-decoration: none;
+    width: min(90%, 400px);
+    height: 90px;
     color: #111;
     font-weight: 600;
     padding: 12px 24px;
@@ -60,46 +86,109 @@ button {
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
 }
 
 button:hover {
-    transform: scale(1.08);
     box-shadow: 0 0px 20px rgba(212, 163, 115, 0.4);
     transform: translateY(-4px) scale(1.05);
 }
 
 button h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #b97fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(185, 127, 255, 0.7),
+        0 0 20px rgba(114, 0, 255, 0.4);
+    margin: 0;
+    line-height: 1;
+
+}
+
+button:hover h3 {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(185, 127, 255, 0.8);
+    transform: scale(1.05); 
 }
 
 footer {
-    
+    margin-top: 20px;
+    padding: 10px 0;
 }
 
-@media only screen and (max-width: 1000px) {
-    main{
+.creditos h2{
+    text-align: center;
+    padding: 2rem 0;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(185, 127, 255, 0.6);
+}
+
+.creditos h2 strong {
+    color: #b97fff;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1375px) {
+    main {
         flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
         min-height: 30vh;
-        button{
+    }
+    main button {
             height: 10vh;
             max-height: 30vh;
-        }
+            width: 350px;
     }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 45vh;
+        padding: 2rem 0;
+    }
+    
     .hero h1 {
         font-size: 4rem;
+    }
+
+    .play {
+        top: auto;
+        bottom: 16px;
+        right: 16px;
+        transform: none;
+        padding: 8px 10px;
+    }
+
+    .play audio {
+        width: 160px;
+        height: 32px;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+        gap: 1rem;
     }
 
     button {
         width: 100%;
         text-align: center;
+    }
+
+    body {
+        background-attachment: scroll;
     }
 }
 
@@ -109,16 +198,13 @@ body {
         rgba(255, 255, 255, 0),
         rgba(0, 0, 0, 0)
     )
-    ,url(../media/aaa.png);
+    ,url(../media/fondoIndex.png);
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-position: center;
+    background-size: contain, cover;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    width: auto;
-    height: 200vh;
+    background-attachment: scroll;
     overflow-x: hidden;
     backdrop-filter: blur(4px);
 }
