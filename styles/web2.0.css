@@ -95,6 +95,22 @@ main {
     color: #ddd;
 }
 
+.videoWeb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto;
+    width: 100%;
+}
+
+.videoWeb iframe {
+    width: 70%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
 footer {
     margin-top: 20px;
     padding: 10px 0;
@@ -138,6 +154,13 @@ footer {
 
     .texto {
         margin-top: 1em;
+    }
+
+    .videoWeb {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin: auto;
+        margin-top: 2em;
     }
 }
 

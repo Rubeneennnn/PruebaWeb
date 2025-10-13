@@ -61,7 +61,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2em;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .bloque img {
@@ -93,6 +93,22 @@ main {
     line-height: 1.8;
     font-size: 1.1em;
     color: #ddd;
+}
+
+.programacionPDF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto;
+    width: 100%;
+}
+
+.programacionPDF iframe {
+    width: 90%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 footer {
