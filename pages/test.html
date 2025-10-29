@@ -5,61 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test de Conocimientos</title>
     <link rel="stylesheet" href="../styles/test.css">
+    <script src="../js/test.js"></script>
 </head>
 <body>
     <header><h1>Test de Conocimientos</h1></header>
     <form onsubmit="Comprobar()" onreset="Limpiar()">
-        <div id="Pregunta_1">
-            <label for="fname">Nombre y Apellidos:</label><br><br>
-                <input type="text" id="fname_id" name="fname" value=""><br><br>
-        </div>
-        <div id="Pregunta_2">
-            <label for="hschool">Instituto:</label><br><br>
-                <input type="text" id="hschool_id" name="hschool" value=""><br><br>
-        </div>
-        <div id="Pregunta_3">
-            <label for="email">Email:</label><br><br>
-                <input type="email" id="email_id" name="email"><br><br>
-        </div>
-        <div id="Pregunta_4">
-            <label for="www">¿Quién creo la World Wide WEB?</label><br><br>
-                <input type="radio" name="www" value="timcorrect"><label>Tim Berners-Lee</label><br>
-                <input type="radio" name="www" value="timincorrect"><label>Tom Berners</label><br>
-                <input type="radio" name="www" value="timincorrect"><label>Tom Beners</label><br>
-                <input type="radio" name="www" value="timincorrect"><label>Tim Beners</label><br><br>
-        </div>
-        <div id="Pregunta_5">
-            <label for="html">¿Qué permite insertar HTML?</label><br><br>
-                <input type="checkbox" name="html" value="enlcorrect"><label>Enlaces</label><br>
-                <input type="checkbox" name="html" value="tablcorrect"><label>Tablas</label><br>
-                <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
-                <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
-                <input type="checkbox" name="html" value="vidcorrect"><label>Videos</label><br>
-                <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
-                <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br><br>
-        </div>
-        <div id="Pregunta_6">
-            <label for="web">¿En qué década empezo a surgir el concepto de WEB 2.0?</label><br><br>
-                <select name="web" id="web_id">
-                    <option name="html" value="a90incorrect">90's</option>
-                    <option name="html" value="a00correct">00's</option>
-                    <option name="html" value="a10incorrect">10's</option>
-                    <option name="html" value="a20incorrect">20's</option>
-                </select><br><br>
-        </div>
-        <div id="Pregunta_7">
-            <label for="birthday">Fecha de nacimiento:</label><br><br>
-                <input type="date" id="birthday" name="birthday"><br><br>
-        </div>
-        <div id="Pregunta_8">
-            <label for="points">¿Cuánto te gusta la tecnología?</label><br><br>
-                0<input type="range" id="points" name="points_id" min="0" max="10">10<br><br>
-        </div>
-
-        <input type="submit" value="Comprobar">
-        <input type="reset" value="Limpiar">
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_1">
+                <label for="fname"><h2>Nombre y Apellidos:</h2></label><br><br>
+                    <input type="text" id="fname_id" name="fname" value=""><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_2">
+                <label for="hschool"><h2>Instituto:</h2></label><br><br>
+                    <input type="text" id="hschool_id" name="hschool" value=""><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_3">
+                <label for="email">Email:</label><br><br>
+                    <input type="email" id="email_id" name="email"><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_4">
+                <label for="www">¿Quién creo la World Wide WEB?</label><br><br>
+                    <input type="radio" name="www" value="timcorrect"><label>Tim Berners-Lee</label><br>
+                    <input type="radio" name="www" value="timincorrect"><label>Tom Berners</label><br>
+                    <input type="radio" name="www" value="timincorrect"><label>Tom Beners</label><br>
+                    <input type="radio" name="www" value="timincorrect"><label>Tim Beners</label><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_5">
+                <label for="html">¿Qué permite insertar HTML?</label><br><br>
+                    <input type="checkbox" name="html" value="enlcorrect"><label>Enlaces</label><br>
+                    <input type="checkbox" name="html" value="tablcorrect"><label>Tablas</label><br>
+                    <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
+                    <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
+                    <input type="checkbox" name="html" value="vidcorrect"><label>Videos</label><br>
+                    <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br>
+                    <input type="checkbox" name="html" value="incorrect"><label>Tablas</label><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_6">
+                <label for="web">¿En qué década empezo a surgir el concepto de WEB 2.0?</label><br><br>
+                    <select name="web" id="web_id">
+                        <option name="html" value="a90incorrect">90's</option>
+                        <option name="html" value="a00correct">00's</option>
+                        <option name="html" value="a10incorrect">10's</option>
+                        <option name="html" value="a20incorrect">20's</option>
+                    </select><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_7">
+                <label for="birthday">Fecha de nacimiento:</label><br><br>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+            </div>
+        </section>
+        <section class="preguntas">
+            <div class="texto" id="Pregunta_8">
+                <label for="points">¿Cuánto te gusta la tecnología?</label><br><br>
+                    0<input type="range" id="points" name="points_id" min="0" max="10">10<br><br>
+            </div>
+        </section>
+        <section class="bloque">
+            <input type="submit" value="Comprobar">
+            <input type="reset" value="Limpiar">
+        </section>
+        
     </form>
-    <b id="txtCheck">Respuesta: </b><br><br>
-        <div id="siguiente"></div>
+    <section class="bloque">
+        <b id="txtCheck">Resultado: </b><br><br>
+            <div id="siguiente"></div>
+    </section>
+    
 </body>
 </html>

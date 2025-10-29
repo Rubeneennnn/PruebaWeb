@@ -11,10 +11,4 @@ function Comprobar() {
             }
         }
     }
-    if (respuestaOk) {
-        txtCheck.innerHTML += " ¡Correcto!"
-        document.getElementById("siguiente").innerHTML = '<a href="test2.html">Siguiente pregunta</a>'
-    } else {
-        txtCheck.innerHTML += " Incorrecto. Inténtalo de nuevo."
-    }
 }
