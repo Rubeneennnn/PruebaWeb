@@ -64,14 +64,19 @@ main {
     backdrop-filter: blur(10px);
 }
 
-.bloque img {
-    width: 45%;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    filter: brightness(0.9) contrast(1.1) saturate(0.9);
+.preguntas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: wrap;
+    gap: 2em;
+    margin-bottom: 4em;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2em;
+    backdrop-filter: blur(10px);
 }
-
-.bloque:nth-child(even){ flex-direction: row-reverse; }
 
 .texto {
     width: 55%;
@@ -87,28 +92,12 @@ main {
     margin-bottom: 0.6em;
 }
 
-.texto p {
+.texto h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.8;
     font-size: 1.1em;
     color: #ddd;
-}
-
-.videoWeb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3em auto;
-    width: 100%;
-}
-
-.videoWeb iframe {
-    width: 70%;
-    aspect-ratio: 16/9;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 footer {
