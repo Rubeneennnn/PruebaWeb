@@ -46,7 +46,7 @@ header h1 {
 }
 
 main {
-    max-width: 1000px;
+    max-width: auto;
     margin: auto;
     padding: 2em 1em;
 }
@@ -66,42 +66,121 @@ main {
 
 .test {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-content: wrap;
+    flex-direction: column;
     gap: 2em;
-    margin-bottom: 4em;
+}
+
+.preguntasBloque_1,
+.preguntasBloque_2,
+.preguntasBloque_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 3em;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2em;
     backdrop-filter: blur(10px);
-}
-
-
-.preguntasBloque {
-    display: flex;
-    flex-direction: row-reverse; 
-    justify-content: space-between; 
-    align-items: flex-start;
-    gap: 20px;
+    width: 100%;
 }
 
 .preguntas {
-    flex: 1 1 25%;
-    min-width: 200px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.6em;
+    min-height: 180px;
+    box-sizing: border-box;
 }
-  
-label {
-    display: block;
-    margin-bottom: 8px;
+
+.preguntas h2 {
+    font-size: 1.3em;
+    margin-bottom: 0.3em;
+    color: #c8a8ff;
 }
-  
-  input {
+
+.preguntas h3 {
+    font-size: 1em;
+    font-weight: 400;
+    color: #ddd;
+}
+
+.preguntas input[type="text"],
+.preguntas input[type="email"],
+.preguntas input[type="date"],
+.preguntas select {
     width: 100%;
+    border-radius: 8px;
+    border: none;
     padding: 8px;
-    margin-bottom: 10px;
-  }
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.preguntas input[type="range"] {
+    width: 100%;
+}
+
+.preguntas label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.preguntas input[type="checkbox"],
+.preguntas input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #b97fff; 
+    cursor: pointer;
+}
+
+.preguntas label h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1em;
+    color: #e6e6e6;
+}
+
+.preguntasBloque_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.button {
+    background: linear-gradient(90deg, #b86bff, #8f5eff, #5cc6ff);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px rgba(150, 80, 255, 0.4);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(150, 80, 255, 0.8);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
 
 p {
     width: 55%;
