@@ -64,7 +64,7 @@ main {
     backdrop-filter: blur(10px);
 }
 
-.preguntas {
+.test {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,11 +78,36 @@ main {
     backdrop-filter: blur(10px);
 }
 
-.texto {
+
+.preguntasBloque {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.preguntas {
+    flex: 1 1 25%;
+    min-width: 200px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+p {
     width: 55%;
 }
 
-.texto h2 {
+h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #c8a8ff;
@@ -92,7 +117,7 @@ main {
     margin-bottom: 0.6em;
 }
 
-.texto h3 {
+h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.8;
