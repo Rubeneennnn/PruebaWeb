@@ -159,27 +159,43 @@ main {
 }
 
 .button {
-    background: linear-gradient(90deg, #b86bff, #8f5eff, #5cc6ff);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    width: min(90%, 400px);
+    height: 90px;
+    color: #111;
     font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    padding: 0.8em 2em;
+    padding: 12px 24px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 0.3s ease;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 12px rgba(150, 80, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #b97fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(185, 127, 255, 0.7),
+        0 0 20px rgba(114, 0, 255, 0.4);
+    margin: 0;
+    line-height: 1;
 }
 
 .button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(150, 80, 255, 0.8);
-}
-
-.button:active {
-    transform: scale(0.97);
+    box-shadow: 0 0px 20px rgba(212, 163, 115, 0.4);
+    transform: translateY(-4px) scale(1.05);
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(185, 127, 255, 0.8);
+    transform: scale(1.05); 
 }
 
 p {
