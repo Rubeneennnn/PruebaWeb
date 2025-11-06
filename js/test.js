@@ -12,7 +12,7 @@ function Comprobar(event) {
     let respuestafecha = false;
     let respuestabases = false;
     document.querySelectorAll(".iconoResultado").forEach(img => img.remove());
-    for (let radio of rdRespuestasWWW) {
+    for (radio of rdRespuestasWWW) {
         if (radio.checked && radio.value == "bernersLee") {
             respuestawww = true;
         }
@@ -25,7 +25,7 @@ function Comprobar(event) {
     }
     let htmlCorrectas = ["enlaces", "tablas", "videos"];
     let htmlSeleccionadas = [];
-    for (let checkbox of cbRespuestasHTML) {
+    for (checkbox of cbRespuestasHTML) {
         if (checkbox.checked) {
             htmlSeleccionadas.push(checkbox.value);
         }
@@ -51,7 +51,7 @@ function Comprobar(event) {
     } else {
         document.getElementById("imgP6").src = "../media/incorrecta.png";
     }
-    for (let date of dtRespuestasFECHA) {
+    for (date of dtRespuestasFECHA) {
         if (date.value == "1969-03-12") {
             respuestafecha = true;
         }
@@ -64,7 +64,7 @@ function Comprobar(event) {
     }
     let basesCorrectas = ["json", "xml"];
     let basesSeleccionadas = [];
-    for (let checkbox of cbRespuestasBASES) {
+    for (checkbox of cbRespuestasBASES) {
         if (checkbox.checked) {
             basesSeleccionadas.push(checkbox.value.trim());
         }

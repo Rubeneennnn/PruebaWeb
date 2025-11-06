@@ -45,6 +45,19 @@ header h1 {
     cursor: pointer;
 }
 
+.img {
+    width: 55px;
+    height: 55px;
+    filter: brightness(2);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.15);
+    filter: brightness(3);
+    cursor: pointer;
+}
+
 main {
     max-width: auto;
     margin: auto;
