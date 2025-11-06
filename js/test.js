@@ -1,76 +1,85 @@
-function Comprobar() {
-    event.preventDefault()
-    let rdRespuestasWWW = document.getElementsByName("www")
-    let cbRespuestasHTML = document.getElementsByName("html")
-    let stRespuestasWEB = document.getElementById("web")
-    let dtRespuestasFECHA = document.getElementsByName("fecha")
-    let cbRespuestasBASES = document.getElementsByName("bases")
-    let respuestawww = false
-    let respuestahtml = false
-    let respuestaweb = false
-    let respuestafecha = false
-    let respuestabases = false
+function Comprobar(event) {
+    event.preventDefault();
+    let rdRespuestasWWW = document.getElementsByName("www");
+    let cbRespuestasHTML = document.getElementsByName("html");
+    let stRespuestasWEB = document.getElementById("web");
+    let dtRespuestasFECHA = document.getElementsByName("fecha");
+    let cbRespuestasBASES = document.getElementsByName("bases");
     let puntuacion = 0;
+    let respuestawww = false;
+    let respuestahtml = false;
+    let respuestaweb = false;
+    let respuestafecha = false;
+    let respuestabases = false;
     document.querySelectorAll(".iconoResultado").forEach(img => img.remove());
-    for (radio of rdRespuestasWWW) {
-        if (radio.checked) {
-            if (radio.value == "bernersLee") {
-                respuestawww = true
-            }
-        }    
+    for (let radio of rdRespuestasWWW) {
+        if (radio.checked && radio.value == "bernersLee") {
+            respuestawww = true;
+        }
     }
-    if (respuestawww = true) {
-        puntuacion += 1;
-        document.getElementById("imgP4").src="../media/correcta.png";
+    if (respuestawww == true) {
+        puntuacion++;
+        document.getElementById("imgP4").src = "../media/correcta.png";
     } else {
-        document.getElementById("imgP4").src="../media/incorrecta.png";
+        document.getElementById("imgP4").src = "../media/incorrecta.png";
     }
-    for (checkbox of cbRespuestasHTML) {
+    let htmlCorrectas = ["enlaces", "tablas", "videos"];
+    let htmlSeleccionadas = [];
+    for (let checkbox of cbRespuestasHTML) {
         if (checkbox.checked) {
-            if (checkbox.value == "enlaces" and "tablas") {
-                respuestahtml = true
-            }
+            htmlSeleccionadas.push(checkbox.value);
         }
     }
-    if (respuestahtml = true) {
-        puntuacion += 1;
-        document.getElementById("imgP5").src="../media/correcta.png";
-    } else {
-        document.getElementById("imgP5").src="../media/incorrecta.png";
+    if (
+        htmlSeleccionadas.length === htmlCorrectas.length &&
+        htmlSeleccionadas.every(val => htmlCorrectas.includes(val))
+    ) {
+        respuestahtml = true;
     }
-    for (select of stRespuestasWEB) {
-        if (select.value == "cero") {
-            respuestaweb = true
+    if (respuestahtml == true) {
+        puntuacion++;
+        document.getElementById("imgP5").src = "../media/correcta.png";
+    } else {
+        document.getElementById("imgP5").src = "../media/incorrecta.png";
+    }
+    if (stRespuestasWEB.value == "cero") {
+        respuestaweb = true;
+    }
+    if (respuestaweb == true) {
+        puntuacion++;
+        document.getElementById("imgP6").src = "../media/correcta.png";
+    } else {
+        document.getElementById("imgP6").src = "../media/incorrecta.png";
+    }
+    for (let date of dtRespuestasFECHA) {
+        if (date.value == "1969-03-12") {
+            respuestafecha = true;
         }
     }
-    if (respuestaweb = true) {
-        puntuacion += 1;
-        document.getElementById("imgP6").src="../media/correcta.png";
+    if (respuestafecha == true) {
+        puntuacion++;
+        document.getElementById("imgP7").src = "../media/correcta.png";
     } else {
-        document.getElementById("imgP6").src="../media/incorrecta.png";
+        document.getElementById("imgP7").src = "../media/incorrecta.png";
     }
-    for (date of dtRespuestasFECHA) {
-        if (date.value == "1991-03-12") {
-            respuestafecha = true
-        }
-    }
-    if (respuestafecha = true) {
-        puntuacion += 1;
-        document.getElementById("imgP7").src="../media/correcta.png";
-    } else {
-        document.getElementById("imgP7").src="../media/incorrecta.png";
-    }
-    for (checkbox of cbRespuestasBASES) {
+    let basesCorrectas = ["json", "xml"];
+    let basesSeleccionadas = [];
+    for (let checkbox of cbRespuestasBASES) {
         if (checkbox.checked) {
-            if (checkbox.value == "json, xml") {
-                respuestabases = true
-            }
+            basesSeleccionadas.push(checkbox.value.trim());
         }
     }
-    if (respuestabases = true) {
-        puntuacion += 1;
-        document.getElementById("imgP8").src="../media/correcta.png";
-    } else {
-        document.getElementById("imgP8").src="../media/incorrecta.png";
+    if (
+        basesSeleccionadas.length === basesCorrectas.length &&
+        basesSeleccionadas.every(val => basesCorrectas.includes(val))
+    ) {
+        respuestabases = true;
     }
+    if (respuestabases == true) {
+        puntuacion++;
+        document.getElementById("imgP8").src = "../media/correcta.png";
+    } else {
+        document.getElementById("imgP8").src = "../media/incorrecta.png";
+    }
+    document.getElementById("puntuacionTotal").textContent = puntuacion;
 }
