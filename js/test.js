@@ -17,48 +17,48 @@ function Comprobar() {
             if (radio.value == "bernersLee") {
                 respuestawww = true
             }
-        }
-        if (respuestawww = true) {
-            puntuacion += 1;
-            document.getElementById("imgP4").src="../media/correcta.png";
-        } else {
-            document.getElementById("imgP4").src="../media/incorrecta.png";
-        }
+        }    
+    }
+    if (respuestawww = true) {
+        puntuacion += 1;
+        document.getElementById("imgP4").src="../media/correcta.png";
+    } else {
+        document.getElementById("imgP4").src="../media/incorrecta.png";
     }
     for (checkbox of cbRespuestasHTML) {
         if (checkbox.checked) {
-            if (checkbox.value == "enlaces, tablas, videos") {
+            if (checkbox.value == "enlaces" and "tablas") {
                 respuestahtml = true
             }
         }
-        if (respuestahtml = true) {
-            puntuacion += 1;
-            document.getElementById("imgP5").src="../media/correcta.png";
-        } else {
-            document.getElementById("imgP5").src="../media/incorrecta.png";
-        }
+    }
+    if (respuestahtml = true) {
+        puntuacion += 1;
+        document.getElementById("imgP5").src="../media/correcta.png";
+    } else {
+        document.getElementById("imgP5").src="../media/incorrecta.png";
     }
     for (select of stRespuestasWEB) {
         if (select.value == "cero") {
             respuestaweb = true
         }
-        if (respuestaweb = true) {
-            puntuacion += 1;
-            document.getElementById("imgP6").src="../media/correcta.png";
-        } else {
-            document.getElementById("imgP6").src="../media/incorrecta.png";
-        }
+    }
+    if (respuestaweb = true) {
+        puntuacion += 1;
+        document.getElementById("imgP6").src="../media/correcta.png";
+    } else {
+        document.getElementById("imgP6").src="../media/incorrecta.png";
     }
     for (date of dtRespuestasFECHA) {
         if (date.value == "1991-03-12") {
             respuestafecha = true
         }
-        if (respuestafecha = true) {
-            puntuacion += 1;
-            document.getElementById("imgP7").src="../media/correcta.png";
-        } else {
-            document.getElementById("imgP7").src="../media/incorrecta.png";
-        }
+    }
+    if (respuestafecha = true) {
+        puntuacion += 1;
+        document.getElementById("imgP7").src="../media/correcta.png";
+    } else {
+        document.getElementById("imgP7").src="../media/incorrecta.png";
     }
     for (checkbox of cbRespuestasBASES) {
         if (checkbox.checked) {
@@ -66,11 +66,11 @@ function Comprobar() {
                 respuestabases = true
             }
         }
-        if (respuestabases = true) {
-            puntuacion += 1;
-            document.getElementById("imgP8").src="../media/correcta.png";
-        } else {
-            document.getElementById("imgP8").src="../media/incorrecta.png";
-        }
+    }
+    if (respuestabases = true) {
+        puntuacion += 1;
+        document.getElementById("imgP8").src="../media/correcta.png";
+    } else {
+        document.getElementById("imgP8").src="../media/incorrecta.png";
     }
 }
