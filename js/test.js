@@ -1,8 +1,8 @@
-function Comprobar(event) {
+function Comprobar() {
     event.preventDefault();
     let rdRespuestasWWW = document.getElementsByName("www");
     let cbRespuestasHTML = document.getElementsByName("html");
-    let stRespuestasWEB = document.getElementById("web");
+    let stRespuestasWEB = document.getElementById("selectWeb");
     let dtRespuestasFECHA = document.getElementsByName("fecha");
     let cbRespuestasBASES = document.getElementsByName("bases");
     let puntuacion = 0;

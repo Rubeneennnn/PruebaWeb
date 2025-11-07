@@ -45,9 +45,9 @@ header h1 {
     cursor: pointer;
 }
 
-.img {
-    width: 55px;
-    height: 55px;
+.img img{
+    width: 100px;
+    height: 100px;
     filter: brightness(2);
     transition: transform 0.3s, filter 0.3s;
 }
