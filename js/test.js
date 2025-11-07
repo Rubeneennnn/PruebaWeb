@@ -52,7 +52,7 @@ function Comprobar(event) {
         document.getElementById("imgP6").src = "../media/incorrecta.png";
     }
     for (date of dtRespuestasFECHA) {
-        if (date.value == "1969-03-12") {
+        if (date.value == "1969-01-01") {
             respuestafecha = true;
         }
     }
