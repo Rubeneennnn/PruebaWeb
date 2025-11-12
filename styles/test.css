@@ -62,6 +62,15 @@ header h1 {
     cursor: pointer;
 }
 
+.preguntasBloque_1 img,
+.preguntasBloque_2 img,
+.preguntasBloque_3 img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 main {
     max-width: auto;
     margin: auto;

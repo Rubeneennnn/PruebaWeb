@@ -82,4 +82,7 @@ function Comprobar() {
         document.getElementById("imgP8").src = "../media/incorrecta.png";
     }
     document.getElementById("puntuacionTotal").textContent = puntuacion;
+    if (puntuacion == 5) {
+        document.getElementById("imgf").src = "../media/final.png";
+    }
 }
