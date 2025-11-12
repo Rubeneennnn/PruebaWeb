@@ -62,9 +62,10 @@ header h1 {
     cursor: pointer;
 }
 
-.preguntasBloque_1 img,
-.preguntasBloque_2 img,
-.preguntasBloque_3 img{
+.imgFinal img{
+    width: 700px;
+    height: 700px;
+    transition: transform 0.3s, filter 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;

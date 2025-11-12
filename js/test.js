@@ -11,7 +11,6 @@ function Comprobar() {
     let respuestaweb = false;
     let respuestafecha = false;
     let respuestabases = false;
-    document.querySelectorAll(".iconoResultado").forEach(img => img.remove());
     for (radio of rdRespuestasWWW) {
         if (radio.checked && radio.value == "bernersLee") {
             respuestawww = true;
@@ -83,6 +82,19 @@ function Comprobar() {
     }
     document.getElementById("puntuacionTotal").textContent = puntuacion;
     if (puntuacion == 5) {
-        document.getElementById("imgf").src = "../media/final.png";
+        document.getElementById("imgF").src = "../media/final.jpg";
     }
+}
+
+function Limpiar() {
+    document.querySelectorAll("input[type=radio], input[type=checkbox]").forEach(input => {
+        input.checked = false;
+    });
+    document.getElementById("selectWeb").value = "";
+    document.querySelector("input[name='fecha']").value = "";
+    ["imgP4", "imgP5", "imgP6", "imgP7", "imgP8", "imgF"].forEach(id => {
+        const img = document.getElementById(id);
+        if (img) img.src = "";
+    });
+    document.getElementById("puntuacionTotal").textContent = "";
 }
