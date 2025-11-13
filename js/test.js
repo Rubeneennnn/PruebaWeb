@@ -93,7 +93,7 @@ function Comprobar() {
     document.getElementById("puntuacionTotal").textContent = puntuacion;
     const imgF = document.getElementById("imgF");
     if (puntuacion == 5) {
-        imgF.src = "../media/final.png";
+        imgF.src = "../media/final.jpg";
         imgF.style.display = "inline";
     } else {
         imgF.style.display = "none";
